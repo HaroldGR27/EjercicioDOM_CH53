@@ -17,6 +17,6 @@ git commit -m "mensaje"
 git push origin main
 ```
 
-<!-- >Vista previa del index
+>Vista previa del index
 
-![index]() -->
+![index](https://raw.githubusercontent.com/HaroldGR27/EjercicioDOM_CH53/refs/heads/main/images/index.jpg)

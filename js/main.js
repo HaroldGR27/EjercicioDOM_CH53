@@ -19,7 +19,9 @@ console.log(listas.length);
 //console.log(listas[0]);
 console.log(listas.item(1));
 
-console.log(elementos.length)
+console.log(elementos.item(2));
+
+console.log(elementos.length);
 
 let contador=0;
 function modifica(){
@@ -35,4 +37,23 @@ btnMostrar.addEventListener("click", function(event){
     event.preventDefault();//no hagas lo que haces por defecto
     //console.log("botón btnModificar presionado");
 
+    let element = document.createElement("li");
+    element.innerText="Another item"; //<li>Another item</li>
+    element.classList.add("list-group-item");
+
+    let element2 = element.cloneNode(true)// sirve para clonar los datos de element
+
+    // ***NOTA: no se puede tener el mismo elemento en dos o mas posiciones
+
+    // before: Inserta el elemeneto antes de la lista
+    // listas.item(0).before(element); 
+    
+    // prepend: Inserta el elemento al principio de la lista
+    // listas.item(0).prepend(element2);
+
+    // append: Inserta el elemento al final de la lista
+    listas.item(0).append(element);
+
+    // after: Inserta el elemento despue de la lista
+    listas.item(0).after(element2);
 });

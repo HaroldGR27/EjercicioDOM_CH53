@@ -1,7 +1,7 @@
 # EjercicioDOM_CH53
 ## Document Object Model - Ejercicio
 
-Tareas por relaizar:
+Tareas por realizar:
 
 1. Modificar la primera lista
 2. MOdificar la segunda lista

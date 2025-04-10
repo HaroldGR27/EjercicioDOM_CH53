@@ -4,6 +4,9 @@ let btnMostrar = document.getElementById("btnMostrar");
 let encabezado1 = document.getElementById("encabezado1");
 let encabezado2 = document.getElementById("encabezado2");
 let listas = document.getElementsByTagName("ul");
+let txtRFC = document.getElementById("txtRFC");
+let txtCURP = document.getElementById("txtCURP");
+let txtTel = document.getElementById("txtTel");
 
 let elementos = document.getElementsByClassName("list-group-item");
 
@@ -76,4 +79,37 @@ btnMostrar.addEventListener("click", function (event) {
 
     listas.item(1).insertAdjacentHTML("beforeend",
         `<li class="list-group-item">Before End item</li>`);
-    });
+    });//botonMostrar
+
+// se ejecuta cuando termina de cargar todos los elementos de la pagina
+window.addEventListener("load", function(event){
+    console.log("Se termino de cargar la pagina")
+});//load
+
+//blur -> cuando se sale del campo
+// txtRFC.addEventListener("blur", function(event){
+//     event.preventDefault();
+//     txtRFC.value = txtRFC.value.toUpperCase();
+// });//txtRFC
+
+// txtCURP.addEventListener("blur", function(event){
+//     event.preventDefault();
+//     txtCURP.value = txtCURP.value.toUpperCase();
+// });//txtRFC
+
+//lo de arriba es lo mismo que aca pero más automatizado
+                
+                        //|
+                        //v
+
+function txtToUpper(event){
+    event.target.value=event.target.value.trim().toUpperCase();
+}
+txtRFC.addEventListener("blur",txtToUpper);
+txtCURP.addEventListener("blur",txtToUpper);
+
+
+txtTel.addEventListener("blur", function(event){
+    event.preventDefault();
+    txtTel.value = txtTel.value.trim().slice(0,10);
+});//txtTel
